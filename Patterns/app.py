@@ -71,13 +71,79 @@
 #     print()    
 
 #PATTERN 11
-n = 5
+# n = 5
 
-for i in range(1,n+1):
-    num = 0
-    for j in range(i):
-        if i%2 != 0 and j%2 == 0:
-            num +=1
-        print(num,end="")
-        # num-=1
-    print()
+# for i in range(1,n+1):
+#     num = 0
+#     if i%2 == 0:
+#         num = 0
+#     else: 
+#         num = 1
+#     for j in range(i):
+#         print(num,end="")
+#         num  = 1 - num 
+#     print()
+
+#PATTERN 12
+# n = 5
+# num = 0
+# space = 2*(n-1)
+# for i in range(0,n):
+#     # num += 1
+#     for j in range(1,i+1):
+#         # num += 1
+#         print(j,end="")
+#     for j in range(space):
+#         # num += 1
+#         # print(j)
+#         print(" ",end="")
+#     for j in range(i,0,-1):
+#         # num += 1
+#         print(j,end="")
+#     space -= 2    
+#     print()  
+
+
+
+#PATTERN 13
+# n = 5
+# num = 0
+
+# for i in range(1,n+1):
+#     # num += 1
+#     for j in range(i):
+#         num += 1
+#         print(num,end="")
+#     print()    
+
+
+# PATTERN 14
+
+# for i in range(65,71):
+    # for j in range(65,i+1):
+    #     print(chr(j), end="")
+    # print()    
+
+
+
+# PATTERN 15
+# for i in range(70,65,-1):
+#     for j in range(65,i):
+#         print(chr(j), end="")
+#     print()    
+
+# PATTERN 16
+# for i in range(65,71):
+#     for j in range(65,i+1):
+#         print(chr(i), end="")
+#     print()   
+
+#PATTERN 17
+# for i in range(4):
+#     for j in range(7):
+
+#     for j in range(7):
+
+#     for j in range(7):
+
+#     print()            
