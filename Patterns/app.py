@@ -139,11 +139,81 @@
 #     print()   
 
 #PATTERN 17
-# for i in range(4):
-#     for j in range(7):
+# n=5
 
-#     for j in range(7):
+# for i in range(n):
+#     ch = 65
+#     bp = (2*i+1) / 2
+#     for j in range(n-i-1):
+#         print(" ",end="")
 
-#     for j in range(7):
+#     for j in range(1,2*i+2):
+#         print(chr(ch),end="") 
+#         if j <= bp:
+#             ch+=1
+#         else:
+#             ch-=1    
+#     for j in range(n-i-1):
+#         print(" " ,end="")
+#     print()   
 
-#     print()            
+
+#PATTERN 18
+# n = 5
+# ch = 70
+# for i in range(1,n+1):
+#     for j in range(i,0,-1):
+#         print(chr(ch-j),end="")   
+#     print()
+
+#PATTERN 19
+# n = 5
+# for i in range(1,n):
+#     for j in range(n-i+1):
+#         print("*",end="")
+#     for j in range(2*i-4):
+#         print(" ",end="")
+#     for j in range(n-i+1):
+#         print("*" ,end="")
+#     print() 
+
+# for i in range(5,1,-1):
+#     for j in range(n-i+1):
+#         print("*",end="")
+#     for j in range(2*i-4):
+#         print(" ",end="")
+#     for j in range(n-i+1):
+#         print("*" ,end="")
+#     print() 
+
+#PATTERN 20
+# n = 5
+
+# for i in range(5,1,-1):
+#     for j in range(n-i+1):
+#         print("*",end="")
+#     for j in range(2*i-4):
+#         print(" ",end="")
+#     for j in range(n-i+1):
+#         print("*" ,end="")
+#     print() 
+
+# for i in range(1,n):
+#     for j in range(n-i+1):
+#         print("*",end="")
+#     for j in range(2*i-4):
+#         print(" ",end="")
+#     for j in range(n-i+1):
+#         print("*" ,end="")
+#     print() 
+
+# PATTERN 20
+n = 4
+for i in range(n):
+    for j in range(n):
+        print('*',end="")
+    print()   
+
+
+
+
