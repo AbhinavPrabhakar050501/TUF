@@ -10,7 +10,7 @@
 # else:
 #     return half*half*x    
 
-
+#formula: xn={(xn/2)2,(x(n//2))2×x,​if n is evenif n is odd​
 def Pow(x,n):
     if n == 0:
         return 1
