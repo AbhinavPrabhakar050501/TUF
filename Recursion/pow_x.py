@@ -11,17 +11,24 @@
 #     return half*half*x    
 
 #formula: xn={(xn/2)2,(x(n//2))2×x,​if n is evenif n is odd​
-def Pow(x,n):
-    if n == 0:
+def power(x,n):
+    if n==0:
         return 1
-    if n < 0 :
-        x = 1/x
-        n = -n #make postive
 
-    half = Pow(x,n//2)
-    if n % 2:
-        return half*half
-    else:
-        return half*half*x
-    
-    return Pow(x,n)
+    if n==1:
+        return x
+
+    if n<0:
+        x = 1/x
+        n = -n
+
+    if n%2 == 0:
+        return power(x*x,n//2)
+
+    return x * power(x,n - 1)    
+
+
+print(power(2,10))
+print(power(-2,10))
+print(power(2,-10))
+

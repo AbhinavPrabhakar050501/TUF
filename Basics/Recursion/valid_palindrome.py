@@ -2,9 +2,9 @@ def helper(l,r):
     if l >= r:
         return True #base case
     
-    while l>r and s[l].alnum() != True: #edge cases
+    while l>r and s[l].isalnum() != True: #edge cases
         l += 1
-    while l>r and s[r].alnum() != True:
+    while l>r and s[r].isalnum() != True:
         r -= 1
 
     if s[l].lower() == s[r].lower():
@@ -12,6 +12,6 @@ def helper(l,r):
     else:
         return False
 
-# s = "abccba"
+s = "abccba"
 # s = "df"
 print(helper(l=0 , r = len(s)-1))      
