@@ -4,9 +4,7 @@ def insert_at_bottom(stack,val):#last element from the other function is appende
         return
     
     top_val = stack.pop()
-
     insert_at_bottom(stack,val)
-
     stack.append(top_val)
 
 def reverse_stack(stack):

@@ -21,3 +21,8 @@ def sort_colors(nums):
         else:
             nums[m],nums[r] = nums[r],nums[m]
             r -= 1
+
+
+nums = [1, 0, 2, 1, 0]
+print(sort_colors(nums))
+print(nums)

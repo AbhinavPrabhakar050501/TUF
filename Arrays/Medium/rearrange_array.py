@@ -10,4 +10,8 @@ def rearrange_array(nums):
         else:
             op[pos_ind] = nums[i]
             pos_ind += 2
-    return op            
+    return op  
+
+nums = [3,1,-2,-5,2,-4]
+print(rearrange_array(nums))
+          
