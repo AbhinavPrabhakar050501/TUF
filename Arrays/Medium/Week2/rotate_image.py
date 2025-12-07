@@ -17,4 +17,9 @@ class Solution:
         for i in range(n):
             matrix[i].reverse()
 
+matrix = [[1,2,3],[4,5,6],[7,8,9]]
+obj = Solution()
+obj.rotate(matrix)
+print(matrix)            
+
         

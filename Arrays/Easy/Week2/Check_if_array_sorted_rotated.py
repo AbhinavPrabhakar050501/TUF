@@ -11,4 +11,8 @@ def sort_rot(nums:List[int]) -> bool:
             drop += 1    
             if drop > 1:
                 return False 
-    return True  
+    return True 
+
+
+print(sort_rot([3,4,5,1,2]))
+print(sort_rot([2,3,1,4]))
