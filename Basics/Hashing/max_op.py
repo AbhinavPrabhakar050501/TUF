@@ -6,7 +6,7 @@ class Solution:
 
         #4:2,5:2,6
 
-        max_op,min_op = 0,len(nums)
+        max_op,min_op = 0,len(nums) #because all numbers can be same.
         most_freq,least_freq = None,None
         for key,value in hashmap.items():
             if value > max_op:
