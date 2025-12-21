@@ -51,13 +51,14 @@ class Solution:
                 total = nums[i] + nums[l] + nums[r]
                 if total == 0:
                     op.append([nums[i],nums[r],nums[l]])
-                    l += 1
-                    r -= 1
-
-                    while l<r and nums[l] == nums[l-1]:
+                    
+                    while l<r and nums[l] == nums[l+1]:
                         l+=1
-                    while l<r and nums[r] == nums[r+1]:
+                    while l<r and nums[r] == nums[r-1]:
                         r-=1
+
+                    l += 1 # and then skip dups
+                    r -= 1    
 
                 elif total < 0:
                     l+=1
@@ -66,6 +67,10 @@ class Solution:
 
         return op        
 
+obj = Solution()
+three_summer = obj.threeSum(nums=[-1,0,1,2,-1,-4])
+
+print(three_summer)
 
 
 
