@@ -38,6 +38,13 @@ class Solution:
 
         #optimal approach using two pointers
 
+        #Step 1 : sort the array
+        #If same as prev number move forward
+        # 
+        # 2 pointers on from fornt and one from back
+        # skip dups 
+        #  
+
         n = len(nums)
         nums.sort()
         op = []

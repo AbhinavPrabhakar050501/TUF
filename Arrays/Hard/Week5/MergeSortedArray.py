@@ -33,7 +33,7 @@ class Solution:
         #Loop while nums2 still has elements
         # and j and i cant be negative
         while j>=0:
-            if i>=0 and nums1[i] > nums2[j]:
+            if i>=0 and nums1[i] >= nums2[j]:
                 nums1[k] = nums1[i]
                 i-=1
             else:
@@ -41,3 +41,11 @@ class Solution:
                 j-=1
             k-=1
             
+
+nums1 = [1,2,2,3,3,0,0,0,0]
+nums2 = [2,2,3,4]
+# nums1 = [1,2,3,0,0,0]
+# nums2 = [2,5,6]
+obj = Solution()
+obj.merge(nums1,5,nums2,4)         
+print(nums1)
