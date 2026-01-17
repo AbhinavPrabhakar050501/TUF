@@ -19,6 +19,7 @@ class Solution:
                     indexEnd = mid + 1
                     mid = mid + 1
 
+                count = (indexEnd - indexStart) + 1 #count occurences problem
                 return[indexStart,indexEnd]
 
             elif target > nums[mid]:
@@ -26,3 +27,7 @@ class Solution:
             else:
                 r = mid - 1
         return [indexStart,indexEnd]   
+
+
+object = Solution()
+print(object.searchRange([0,0,1,2,3,4,4,4,5,5],4))    

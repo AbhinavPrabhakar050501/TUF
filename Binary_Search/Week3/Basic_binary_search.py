@@ -1,3 +1,5 @@
+from typing import List
+
 class Solution:
     def search(self, nums: List[int], target: int) -> int:
         n = len(nums)
@@ -12,3 +14,7 @@ class Solution:
             else:
                 r = m - 1             
         return -1 
+    
+
+object = Solution()
+print(object.search([0,0,1,2,3,4,4,4,5,5],4))        

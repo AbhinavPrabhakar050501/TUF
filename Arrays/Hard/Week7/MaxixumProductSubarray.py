@@ -18,3 +18,6 @@ class Solution:
 
             maxProd = max(maxProd,max(prefix,suffix))
         return maxProd   
+
+object = Solution()
+print(object.maxProduct([1,3,6,-1,3,4,2,0,1,2,3]))    
