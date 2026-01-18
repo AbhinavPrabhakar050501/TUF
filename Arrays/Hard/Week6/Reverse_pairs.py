@@ -11,12 +11,12 @@ class Solution:
             mid = (low+high)//2
             count += mergeSort(nums,low,mid)
             count += mergeSort(nums,mid+1,high)
-            count += countInversions(nums,low,mid,high)
+            count += countReversePairs(nums,low,mid,high)
             merge(nums,low,mid,high)
 
             return count 
 
-        def countInversions(nums,low,mid,high):
+        def countReversePairs(nums,low,mid,high):
             right = mid + 1
             count = 0
             for i in range(low,mid+1):

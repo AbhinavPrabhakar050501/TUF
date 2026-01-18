@@ -1,4 +1,5 @@
 from typing import List
+#pattern 2 - move forward from mid
 class Solution:
     def searchRange(self, nums: List[int], target: int) -> List[int]:
         n = len(nums)
