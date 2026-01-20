@@ -1,0 +1,29 @@
+"""if you get questions envolving duplicates then try to solve them as unique element
+based and modify the code where the condition fails ,
+for ex here it breaks at identifying the sorting portion"""
+from typing import List
+class Solution:
+    def search(self, nums: List[int], target: int) -> bool:
+        n = len(nums)
+        l,r = 0,n - 1
+        while l <= r:
+            m = (l+r)//2
+            if nums[m] == target:
+                return True
+            if nums[l] == nums[m] == nums[r]:
+                l+=1
+                r-=1   
+                continue 
+            #find the right sorted part
+            if nums[m] <= nums[r]:
+                if  nums[m] <= target <= nums[r]:
+                    l = m+1
+                else:
+                    r = m-1    
+            else:#left sorted part
+                if nums[l] <= target <= nums[m]:
+                    r = m-1
+                else:
+                    l= m+1    
+        return False    
+
