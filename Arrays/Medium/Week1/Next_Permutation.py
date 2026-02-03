@@ -22,6 +22,7 @@ def nextPermutation(nums):
     #reverse the remaining
     nums[index+1:] = reversed(nums[index+1:])
 nums = [1,2,3]
-nums = [3,2,1,4]
+# nums = [3,2,1,4]
+nums = [1,4,3,2]
 nextPermutation(nums)
 print(nums)
