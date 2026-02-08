@@ -1,0 +1,63 @@
+from typing import List
+class Solution:
+    def minDays(self, bloomDay: List[int], m: int, k: int) -> int:
+        # Brute force O(min to max)*n
+        # n = len(bloomDay)
+        # if m*k > n:
+        #     return -1
+
+        # count = 0
+        # no_of_bouquets = 0    
+
+        # mini = min(bloomDay)
+        # maxi = max(bloomDay)
+        # for day in range(mini,maxi+1):
+        #     no_of_bouquets, count = 0, 0
+
+        #     for j in range(n):
+        #         if bloomDay[j] <= day:
+        #             count += 1
+        #         else:    
+        #             no_of_bouquets += count//k
+        #             print(no_of_bouquets)
+        #             count = 0 
+
+        #     no_of_bouquets += count//k
+
+        #     if no_of_bouquets >= m:
+        #         return day
+        # return -n = len(bloomDay)
+
+        def possible(bloomday, day, m ,k):
+            count = 0
+            no_of_bouquets = 0
+            for bloom in bloomday:
+                if bloom <= day:
+                    count += 1
+                else:
+                    no_of_bouquets += count//k 
+                    count = 0    
+            no_of_bouquets += count//k
+
+            return no_of_bouquets >= m  
+
+        n = len(bloomDay)
+        if m*k > n:
+            return -1
+        ans = -1
+        l = min(bloomDay)
+        r = max(bloomDay)
+        while l <= r:
+            mid =(l+r)//2
+            if possible(bloomDay,mid,m,k):
+                ans = mid
+                r = mid - 1
+            else:
+                l = mid + 1    
+
+        return ans                         
+
+        #O(log n (min to max) * n
+
+
+

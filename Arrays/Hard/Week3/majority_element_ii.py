@@ -14,7 +14,7 @@ def majorityElement(nums: List[int]) -> List[int]:
         # return op               
         
         #majority voting algo with 2 candidates
-        candidate1,candidate2 = 0,0
+        candidate1,candidate2 = None, None #change from 0,0 to None, None as last edge case fails cause compare 0 and 0.
         count1,count2 = 0,0
 
         #first pass for finding the candidates
