@@ -58,6 +58,38 @@ class Solution:
         return ans                         
 
         #O(log n (min to max) * n
+        # same approach difference code.
+        def days_needed_to_bloom(bloomDay,m,k,days):
+            bloom_flowers = 0
+            for i in range(len(bloomDay)):
+                if days >= bloomDay[i]:
+                    bloom_flowers += 1
+                    if bloom_flowers == k:
+                        m -= 1  
+                        bloom_flowers = 0
+                else:
+                    bloom_flowers = 0   
 
+            if m <= 0:
+                return True
+            else:
+                return False
+
+        n = len(bloomDay)
+        if n < m * k:
+            return -1
+
+        l = min(bloomDay)
+        r = max(bloomDay)
+        op = r
+        while l<=r:
+            days = (l+r)//2
+            needed_days = days_needed_to_bloom(bloomDay,m,k,days)
+            if needed_days:
+                op = days
+                r = days - 1
+            else:
+                l = days + 1
+        return op         
 
 
