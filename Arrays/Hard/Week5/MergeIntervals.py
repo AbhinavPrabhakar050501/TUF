@@ -21,3 +21,23 @@ class Solution:
 intervals = [[1,3],[2,6],[8,10],[15,18]]    
 obj = Solution()
 print(obj.merge(intervals))  
+
+
+class Order:
+    def __init__(self, name, dish):
+        self.name = name
+        self.dish = dish
+
+    def get_dishes(self):
+        return f"{self.name} has ordered {self.dish.dish}"
+
+class Menu:
+    def __init__(self,dish:str):
+        self.dish = dish
+
+        
+dish_want = Menu("Chicken")
+
+customer_order = Order("Abhi",dish_want)
+
+print(customer_order.get_dishes())

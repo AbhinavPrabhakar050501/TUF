@@ -24,3 +24,4 @@ class Solution:
 
         return k+1+r #l+k
 
+str
